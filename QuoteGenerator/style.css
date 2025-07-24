@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: rgb(166, 238, 238);
+  overflow-x: hidden;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80vh;
+  gap: 20px;
+}
+h1 {
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+  text-align: center;
+  animation: slide-in-center 0.5s ease-out both;
+}
+.whole {
+  padding: 30px;
+  background-color: beige;
+  border-radius: 20px;
+  max-width: 500px; /* Limits horizontal width */
+  width: 100%; /* Allows it to scale on small screens */
+  text-align: center;
+  word-wrap: break-word;
+  box-shadow: 10px 11px 5px -5px rgba(0, 0, 0, 0.45);
+}
+
+button {
+  justify-content: center;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: large;
+  margin-top: 15px;
+  background-color: beige;
+}
+button:hover {
+  background-color: black;
+  color: beige;
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+@keyframes slide-in-center {
+  0% {
+    transform: translateX(150px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0); /* Back to original centered position */
+    opacity: 1;
+  }
+}
